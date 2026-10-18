@@ -20,7 +20,7 @@
 ## Overview
 
 `it-works` is the smallest possible deployable web artifact: one `index.html` file that renders
-a centered **IT WORK'S!** headline on a dark background. No build step, no package manager,
+a centered **IT WOKS DUDE!** headline on a dark background. No build step, no package manager,
 no runtime, no external request. Open the file and it works — that is the entire point.
 
 It doubles as the reference project for a Paperclip-piloted software company: every commit in
