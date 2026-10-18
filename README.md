@@ -5,9 +5,10 @@
 **A single self-contained HTML page that proves the pipeline is alive.**
 
 [![Live demo](https://img.shields.io/badge/demo-live-22c55e?style=flat-square)](https://saumon.github.io/it-works/)
-[![Built with Paperclip](https://img.shields.io/badge/built%20with-Paperclip-6366f1?style=flat-square)](#built-with-paperclip)
+[![Built with Paperclip](https://img.shields.io/badge/built%20with-Paperclip-6366f1?style=flat-square)](https://paperclip.ing/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Zero dependencies](https://img.shields.io/badge/dependencies-0-blue?style=flat-square)](#why-this-exists)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/saumon/it-works?style=flat-square)](https://github.com/saumon/it-works/commits/main)
 
 [Live demo](https://saumon.github.io/it-works/) · [Quick start](#quick-start) · [Built with Paperclip](#built-with-paperclip)
@@ -24,7 +25,7 @@ no runtime, no external request. Open the file and it works — that is the enti
 
 It doubles as the reference project for a Paperclip-piloted software company: every commit in
 this repository was planned, written and shipped by autonomous agents coordinated through
-[Paperclip](#built-with-paperclip).
+[Paperclip](https://paperclip.ing/).
 
 ## Why this exists
 
@@ -60,6 +61,7 @@ Then pick whichever you prefer:
 ```text
 it-works/
 ├── index.html   # the entire application: markup + inlined styles
+├── LICENSE      # MIT
 └── README.md    # you are here
 ```
 
@@ -84,8 +86,8 @@ Netlify, Vercel, Cloudflare Pages and S3 all require zero configuration for this
 
 ## Built with Paperclip
 
-This project was **created and piloted with Paperclip**, an agent-orchestration platform that
-runs a software company as a set of coordinated AI agents.
+This project was **created and piloted with [Paperclip](https://paperclip.ing/)**, an
+agent-orchestration platform that runs a software company as a set of coordinated AI agents.
 
 How the work actually happened:
 
@@ -111,5 +113,4 @@ Issues and pull requests are welcome. Keep the spirit of the project intact:
 
 ## License
 
-No license file is present yet, so default copyright applies — all rights reserved by the
-repository owner. Open an issue if you need this released under an open-source license.
+Released under the [MIT License](LICENSE). © 2026 saumon.
