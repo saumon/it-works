@@ -11,8 +11,7 @@
     }
     body {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
       background: #0f172a;
       background-image: linear-gradient(
         125deg,
@@ -27,6 +26,15 @@
       animation: backdrop-drift 24s ease-in-out infinite alternate;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
+    /* Le titre garde son centrage parfait ; le pied de page reste collé en bas. */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
     h1 {
       margin: 0;
       color: #f8fafc;
@@ -35,6 +43,43 @@
       text-align: center;
       text-shadow: 0 0 1.5rem rgba(15, 23, 42, 0.9);
       animation: headline-hues 18s linear infinite;
+    }
+
+    footer {
+      flex: none;
+      padding: 1.25rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+      text-align: center;
+    }
+    .repo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      max-width: 100%;
+      padding: 0.5rem 0.9rem;
+      border: 1px solid rgba(248, 250, 252, 0.2);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.45);
+      color: #e2e8f0;
+      font-size: clamp(0.8rem, 3.5vw, 1rem);
+      line-height: 1.2;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .repo-link svg {
+      flex: none;
+      width: 1.25em;
+      height: 1.25em;
+      fill: currentColor;
+    }
+    .repo-link:hover,
+    .repo-link:focus-visible {
+      border-color: rgba(248, 250, 252, 0.65);
+      background: rgba(248, 250, 252, 0.12);
+      color: #f8fafc;
+    }
+    .repo-link:focus-visible {
+      outline: 2px solid #a5f3fc;
+      outline-offset: 3px;
     }
 
     /* Le dégradé fait des allers-retours : pas de saut en fin de boucle. */
@@ -64,10 +109,24 @@
         color: #f8fafc;
         animation: none;
       }
+      .repo-link {
+        transition: none;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>IT WOKS DUDE!</h1>
+  <main>
+    <h1>IT WOKS DUDE!</h1>
+  </main>
+  <footer>
+    <a class="repo-link" href="https://github.com/saumon/it-works" target="_blank" rel="noopener noreferrer">
+      <!-- Logo GitHub en SVG inline : aucune dépendance externe. -->
+      <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a5.6 5.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+      <span>Voir le dépôt sur GitHub</span>
+    </a>
+  </footer>
 </body>
 </html>
